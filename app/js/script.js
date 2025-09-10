@@ -5,6 +5,7 @@ const btnClose = document.querySelector('#btnClose');
 const menuTopNav = document.querySelector('#menuTopNav');
 const overlay = document.querySelector('#overlay');
 const breakpoint = window.matchMedia('(width < 43.75em)');
+const body = document.querySelector('body');
 
 const setupTopNav = () => {
   if (breakpoint.matches) {
@@ -34,7 +35,7 @@ function openMobileMenu() {
   menuTopNav.removeAttribute('inert');
   menuTopNav.style.transitionDuration = '400ms';
   overlay.style.transitionDuration = '400ms';
-  bodyScrollLock.disableBodyScroll(menuTopNav);
+  bodyScrollLock.disableBodyScroll(body);
   btnClose.focus();
 }
 
@@ -44,7 +45,7 @@ function closeMobileMenu() {
   main.removeAttribute('inert');
   footer.removeAttribute('inert');
   menuTopNav.setAttribute('inert', '');
-  bodyScrollLock.enableBodyScroll(menuTopNav);
+  bodyScrollLock.enableBodyScroll(body);
   btnOpen.focus();
 
   setTimeout(() => {
