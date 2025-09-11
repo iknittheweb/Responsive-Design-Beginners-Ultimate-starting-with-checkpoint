@@ -312,7 +312,7 @@ a {
     border-radius: 0 0 20px 20px;
     box-shadow: 0 12px 12px var(--menu-shadow);
     translate: 0 -106%;
-    transition: translate ease-in-out;
+    transition: translate 400ms ease-in-out;
   }
 }
 @media (max-width: 43.74875em) and (prefers-reduced-motion) {
