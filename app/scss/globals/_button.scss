@@ -20,7 +20,9 @@
 
     &:hover {
       background-color: var(--button-primary-bg-hover);
-      border: u.rem(2) solid var(--button-primary-bg-hover);
+      color: white; // comment out for original version
+      // border: u.rem(2) solid var(--button-primary-bg-hover); // comment in for original version
+      border: u.rem(2) solid white; // use custom css property from background-color for original version
     }
 
     &.white {

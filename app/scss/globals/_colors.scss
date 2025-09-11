@@ -10,7 +10,8 @@
   --link-gradient2: hsl(50, 99%, 53%);
   --hero-bg: hsl(232, 58%, 55%);
   --button-primary-bg: hsl(180, 100%, 42%);
-  --button-primary-bg-hover: hsl(180, 100%, 37%);
+  // --button-primary-bg-hover: hsl(180, 100%, 37%); // original version
+  --button-primary-bg-hover: hsl(232, 58%, 55%); // matching version
   --button-primary-text: hsl(233, 14%, 25%);
   --button-primary-white-bg: hsl(0, 0%, 100%);
   --button-primary-white-bg-hover: hsl(0, 0%, 90%);

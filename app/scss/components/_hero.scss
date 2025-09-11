@@ -9,6 +9,7 @@
 
   background-color: var(--hero-bg);
   color: var(--text-light);
+  -webkit-padding-before: 40px;
   padding-block-start: 40px;
 
   &__wave {
@@ -18,10 +19,12 @@
   &__content {
     display: grid;
     gap: 40px;
+    -webkit-margin-after: calc(60px + var(--wave-height));
     margin-block-end: calc(60px + var(--wave-height));
 
     @include u.breakpoint(large) {
       grid-template-columns: 6fr 5fr;
+      -webkit-margin-after: 0;
       margin-block-end: 0;
     }
   }
@@ -33,6 +36,7 @@
 
     @include u.breakpoint(large) {
       width: 100%;
+      -webkit-padding-before: 30px;
       padding-block-start: 30px;
       order: 2;
       justify-self: end;
@@ -44,6 +48,7 @@
 
   &__button {
     &:first-of-type {
+      -webkit-margin-end: 20px;
       margin-inline-end: 20px;
     }
   }

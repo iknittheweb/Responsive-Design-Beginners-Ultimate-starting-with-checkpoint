@@ -140,7 +140,7 @@ a {
   --link-gradient2: hsl(50, 99%, 53%);
   --hero-bg: hsl(232, 58%, 55%);
   --button-primary-bg: hsl(180, 100%, 42%);
-  --button-primary-bg-hover: hsl(180, 100%, 37%);
+  --button-primary-bg-hover: hsl(232, 58%, 55%);
   --button-primary-text: hsl(233, 14%, 25%);
   --button-primary-white-bg: hsl(0, 0%, 100%);
   --button-primary-white-bg-hover: hsl(0, 0%, 90%);
@@ -175,7 +175,8 @@ a {
 }
 .button.primary:hover {
   background-color: var(--button-primary-bg-hover);
-  border: 0.125rem solid var(--button-primary-bg-hover);
+  color: white;
+  border: 0.125rem solid white;
 }
 .button.primary.white {
   background-color: var(--button-primary-white-bg);
@@ -247,7 +248,7 @@ a {
 .topnav {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
 }
 .topnav, .topnav__menu {
   background-color: var(--header-bg);
@@ -278,7 +279,7 @@ a {
     background-color: var(--menu-overlay);
     opacity: 0;
     pointer-events: none;
-    transition: opacity ease-in-out;
+    transition: opacity 400ms ease-in-out;
   }
   .topnav__overlay:has(+ .topnav__open[aria-expanded=true]) {
     opacity: 1;
@@ -367,7 +368,7 @@ a {
   margin-top: 3px;
   background: linear-gradient(to right, var(--link-gradient1), var(--link-gradient2) 80%);
   opacity: 0;
-  transition: opacity ease-in-out;
+  transition: opacity 250ms ease-in-out;
 }
 @media (max-width: 43.74875em) {
   .topnav__link::after {

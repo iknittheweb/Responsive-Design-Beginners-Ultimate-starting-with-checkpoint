@@ -4,7 +4,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
 
   &,
   &__menu {
@@ -40,7 +40,7 @@
       background-color: var(--menu-overlay);
       opacity: 0;
       pointer-events: none;
-      transition: opacity ease-in-out;
+      transition: opacity 400ms ease-in-out;
 
       &:has(+ .topnav__open[aria-expanded='true']) {
         opacity: 1;
@@ -140,7 +140,7 @@
         var(--link-gradient2) 80%
       );
       opacity: 0;
-      transition: opacity ease-in-out;
+      transition: opacity 250ms ease-in-out;
 
       @include u.breakpoint-down(small) {
         display: none;
