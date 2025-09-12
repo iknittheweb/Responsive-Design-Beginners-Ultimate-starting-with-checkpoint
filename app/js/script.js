@@ -1,6 +1,7 @@
 const btnOpen = document.querySelector('#btnOpen');
 const btnClose = document.querySelector('#btnClose');
 const menuTopNav = document.querySelector('#menuTopNav');
+const overlay = document.querySelector('#overlay');
 const breakpoint = window.matchMedia('(width < 43.75em)');
 
 const setupTopNav = () => {
@@ -27,10 +28,17 @@ function openMobileMenu() {
   console.log('run openMobileMenu');
   btnOpen.setAttribute('aria-expanded', 'true');
   menuTopNav.removeAttribute('inert');
+  menuTopNav.style.transitionDuration = '400ms';
+  overlay.style.transitionDuration = '400ms';
 }
 
 function closeMobileMenu() {
   console.log('run closeMobileMenu');
   btnOpen.setAttribute('aria-expanded', 'false');
   menuTopNav.setAttribute('inert', '');
+
+  setTimeout(() => {
+    menuTopNav.removeAttribute('style');
+    overlay.removeAttribute('style');
+  }, 500);
 }
