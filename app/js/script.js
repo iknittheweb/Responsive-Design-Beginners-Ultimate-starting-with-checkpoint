@@ -30,12 +30,14 @@ function openMobileMenu() {
   menuTopNav.removeAttribute('inert');
   menuTopNav.style.transitionDuration = '400ms';
   overlay.style.transitionDuration = '400ms';
+  bodyScrollLock.disableBodyScroll(menuTopNav);
 }
 
 function closeMobileMenu() {
   console.log('run closeMobileMenu');
   btnOpen.setAttribute('aria-expanded', 'false');
   menuTopNav.setAttribute('inert', '');
+  bodyScrollLock.enableBodyScroll(menuTopNav);
 
   setTimeout(() => {
     menuTopNav.removeAttribute('style');
