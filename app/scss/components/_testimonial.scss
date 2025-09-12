@@ -1,6 +1,19 @@
 @use '../util' as u;
 
 .testimonial {
+  --testimonial-bg: hsl(0, 0%, 100%);
+  --testimonial-text: hsl(233, 14%, 25%);
+  --testimonial-icon: hsl(180, 100%, 42%);
+
+  background-color: var(--testimonial-bg);
+  color: var(--testimonial-text);
+
+  &.dark {
+    --testimonial-bg: hsl(232, 58%, 55%);
+    --testimonial-text: var(--text-light);
+    --testimonial-icon: hsla(0, 0%, 100%, 50%);
+  }
+
   &__wrapper {
     max-width: u.rem(800);
   }
@@ -12,6 +25,7 @@
   &__icon {
     width: 16%;
     max-width: u.rem(78);
+    -webkit-margin-after: clamp(u.rem(20), 0.68rem + 2.42vw, u.rem(40));
     margin-block-end: clamp(u.rem(20), 0.68rem + 2.42vw, u.rem(40));
 
     @include u.breakpoint(xlarge) {
@@ -33,6 +47,10 @@
         display: none;
       }
     }
+
+    path {
+      fill: var(--testimonial-icon);
+    }
   }
 
   &__quote {
@@ -40,6 +58,7 @@
     font-size: clamp(u.rem(24), 1.16rem + 1.45vw, u.rem(36));
     font-weight: 700;
     line-height: 1.25;
+    -webkit-margin-after: u.rem(40);
     margin-block-end: u.rem(40);
   }
 
@@ -60,6 +79,7 @@
   }
 
   &__author-description {
+    -webkit-margin-after: 0;
     margin-block-end: 0;
 
     @include u.breakpoint-down(xsmall) {
