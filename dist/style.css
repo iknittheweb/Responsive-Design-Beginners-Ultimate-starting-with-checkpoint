@@ -248,7 +248,7 @@ a {
 .topnav {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 .topnav, .topnav__menu {
   background-color: var(--header-bg);
